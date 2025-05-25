@@ -1,1 +1,190 @@
+<html>
+    <head>
+        <style>
+        body {
+            font-family: "Arial";
+            font-size: 20px;
+        }
+        header {
+            background: navy;
+            display: flex;
+            align-items: flex-end;
+            padding: 10px 20px;
+        }
 
+        header img {
+            height: 50px;
+            margin-right: 15px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            margin-bottom: 5px;
+            color: LightBlue;
+        }
+        header a {
+            color: white;
+        }
+        nav {
+            background: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            font-size: 18px;
+            background: navy;
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 3px solid navy;
+            border-radius: 10px;
+        }
+
+        nav a:hover {
+            color: navy;
+            background: white;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        main h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color: navy;
+            text-align: center;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: navy;
+            padding: 10px;
+        }
+
+        footer p {
+            background-color: white;
+            padding: 5px;
+        }
+
+        .rounded-box {
+            background-color: LightBlue;
+            border: 3px solid navy;
+            border-radius: 15px;
+            padding: 20px;
+            display: block;
+            margin: 20px 0;
+            font-size: 25px;
+            line-height: 1.5;
+            text-align: left;
+            box-sizing: border-box;
+            color: navy;
+            justify-content: space-around;
+        }
+        button {
+            background: white;
+            border: 3px solid navy;
+            border-radius: 10px;
+            font-size: 20px;
+            color: navy;
+            width: 100px;
+            height: 40px;
+        }
+        .back-to-top {
+            margin-top: 20px;
+        }
+        select {
+            padding: 10px;
+            background-color: white;
+            color: navy;
+            border-radius: 10px;
+            font-size: 20px;
+            border: 3px solid navy;
+        }
+        select option {
+            color: white;
+            background-color: navy;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="https://cdn1.iconfinder.com/data/icons/diwali-line/140/popper__confetti__party__celebration__festival-1024.png">
+            <p><b>Внимание! Сезонные скидки 40%</b> <a href="#season-offer">Подробнее</a></p>
+        </header>
+        <nav>
+            <a href="#products">Продукция</a>
+            <a href="#how-to-buy">Как купить?</a>
+            <a href="#wholesale">Оптом</a>
+            <a href="#about">О компании</a>
+        </nav>
+        <main>
+            <h1>Fantastic Party</h1>
+            <p style="text-align: center; font-size: 25px">Выберите город для доставки:</p>
+            <p style="text-align: center;"><select>
+                <option>Новосибирск</option>
+                <option>Барнаул</option>
+                <option>Бийск</option>
+            </select></p>
+
+            <section id="products">
+                <p class="rounded-box">
+                    <img src="https://cdn.culture.ru/images/e1cbaa97-372d-5850-83fe-af2660af0ad9" width="100">
+                    <br>Хлопушки
+                </p>
+
+                <p class="rounded-box">
+                    <img src="https://i.pinimg.com/736x/8b/1a/3e/8b1a3ecb69b48707d1c05dbca217fc6c.jpg" width="100">
+                    <br>Петарды
+                </p>
+
+                <p class="rounded-box">
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/161/933/large_2x/fireworks-with-background-vector.jpg" width="100">
+                    <br>Фонтаны
+                </p>
+                <p class="rounded-box">
+                    <img src="https://img.freepik.com/premium-vector/doodle-sticker-with-fireworks-salute_653461-1196.jpg" width="100">
+                    <br>Фестивальные шары
+                </p>
+            </section>
+            <section id="season-offer">
+                <h1>Сезонное предложение</h1>
+                <p>С 5 декабря по 5 марта действует предложение: скидка на всю продукцию 40%.</p>
+                <p><b><i>Спешите купить праздник выгодно?</i></b></p>
+                <img src="https://big54.ru/upload/iblock/24e/gbmsh2hokhrd8k8dlqk7hz5g8sgabj8w.png" width="500">
+            </section>
+
+            <section id="how-to-buy">
+                <h1>Как приобрести?</h1>
+                <button onclick="document.querySelector('footer').scrollIntoView({behavior: 'smooth'})">Контакты</button>
+                <p>Вы можете сделать заказ по телефону или приобрести товары в магазине.</p>
+                <p>В магазине вас ждёт подробный рассказ о нашей продукции.</p>
+                <p>При посещении магазина можно заказать доставку на дом/в офис.</p>
+                <p>Вы также можете по телефону сделать предзаказ для резервирования товаров в магазине.</p>
+                <img src="https://avatars.mds.yandex.net/i?id=d33b0beed2c0290f4ceffa7e8bc8c06d_l-5288942-images-thumbs&n=13" width="300px">
+            </section>
+
+            <section id="wholesale">
+                <h1>Оптом</h1>
+                <p>От 100 000₽ - скидка 45%</p>
+                <p>От 200 000₽ - скидка 50%</p>
+                <img src="https://i.pinimg.com/originals/0e/1d/fe/0e1dfeac81540677f535b11285853b5d.png" width="150">
+            </section>
+
+            <section id="about">
+                <h1>О компании</h1>
+                <p>Наша история началась с магазина, открывшегося в 2005 году. Тогда мы предлагали только хлопушки.</p>
+                <p>В 2015 году у нас появился сайт, а ассортимент пополнился новыми видами товаров.</p>
+                <img src="https://muhaz.org/mcyallif-adli-kimjyavi-reaksijalar/7045_html_5b3aed9a.gif" width="150">
+                <br><button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Наверх</button>
+            </section>
+        </main>
+        <footer>
+            <p><b><i>Контакты</i></b></p>
+            <p>Адрес: Г. Звездный, пр-кт, Экспрериментальный, 21</p>
+            <p>Тел.: 2502-3716</p>
+        </footer>
+    </body>
+</html>
