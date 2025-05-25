@@ -1,1 +1,32 @@
-
+<html>
+    <h1>Меню нашего кафе</h1>
+    <table style="border: 2px solid Pink); border-collapse: collapse">
+        <tr style="background: chocolate; color: white">
+            <td></td>
+            <td>Название</td>
+            <td>Цена</td>
+            <td>Спец. предложение</td>
+        </tr>
+        <tr style="border: 2px solid Pink">
+            <td rowspan="2" style="background: LightGreen">Салаты</td>
+            <td>Витаминный</td>
+            <td>170 руб.</td>
+            <td>-</td>
+        </tr>
+        <tr style="border: 2px solid Pink">
+            <td>Новогодний</td>
+            <td>До 08.01</td>
+            <td>цена 250 руб.</td>
+        </tr>
+        <tr style="border: 2px solid Pink">
+            <td rowspan="2" style="background: orchid">Десерты</td>
+            <td>Чизкейк</td>
+            <td>170 руб.</td>
+            <td rowspan="2">Чашка кофе в подарок!</td>
+        </tr>
+        <tr style="border: 2px solid Pink">
+            <td>Малиновый тарт</td>
+            <td>140 руб.</td>
+        </tr>
+    </table>
+</html>
