@@ -1,1 +1,33 @@
-
+<html>
+    <h1>Турнир по киберспорту</h1>
+    <table style="border: 1px solid grey; border-collapse: collapse">
+        <tr style="border: 1px solid grey; background-color: rgb(128, 128, 0); color: white">
+            <td>Игра</td>
+            <td>Команда 1</td>
+            <td>Команда 2</td>
+            <td>Дата</td>
+            <td>Счёт</td>
+        </tr>
+        <tr style="border: 1px solid grey">
+            <td style="background-color: rgb(128, 128, 0); color: white">Warface</td>
+            <td style="background-color: tan">Legion</td>
+            <td>Fire Master</td>
+            <td style="background-color: tan">11.11.2020</td>
+            <td>2 : 0</td>
+        </tr>
+        <tr style="border: 1px solid grey">
+            <td style="background-color: rgb(128, 128, 0); color: white">CrossFire</td>
+            <td style="background-color: tan">Wind of War</td>
+            <td>Legion</td>
+            <td style="background-color: tan">22.11.2020</td>
+            <td>2 : 1</td>
+        </tr>
+        <tr style="border: 1px solid grey">
+            <td style="background-color: rgb(128, 128, 0); color: white">CS GO</td>
+            <td style="background-color: tan">Demon Strike</td>
+            <td>Wind of War</td>
+            <td style="background-color: tan">03.12.2020</td>
+            <td>1 : 0</td>
+        </tr>
+    </table>
+</html>
