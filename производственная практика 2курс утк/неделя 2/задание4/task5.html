@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+            }
 
+            nav {
+                text-align: right;
+                padding-bottom: 25px;
+                border-bottom: 1px dashed black;
+            }
+
+            nav a {
+                margin: 10px;
+                text-decoration: none;
+            }
+
+            h1 {
+                font-size: 50px;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .text {
+                width: 300px;
+            }
+
+            .text p {
+                color: lightblue;
+                font-size: 35px;
+            }
+
+            .text em {
+                display: block;
+                text-align: right;
+            }
+
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0px;
+                width: 500px;
+            }
+
+            .gallery img {
+                width: 166.66px;
+                height: 250px;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <nav> <a href="">Сезонные акции</a> <a href="">Контакты</a> </nav>
+        <h1>Горные экскурсии</h1>
+        <div class="container">
+            <div class="gallery">
+                <img src="https://i0.wp.com/img.goodfon.com/original/3709x2483/e/3e/gory-vershiny-sneg-uschele.jpg?ssl=1">
+                <img src="https://c.wallhere.com/photos/e7/d0/1920x1200_px_landscape_mountain_nature-703056.jpg!d">
+                <img src="https://avatars.mds.yandex.net/i?id=dc991e8fa3858b7d630a641ce6f2de74_l-8312144-images-thumbs&n=13">
+
+                <img src="https://cdn1.ozone.ru/s3/multimedia-e/6368541158.jpg">
+                <img src="https://i.pinimg.com/originals/e4/36/a0/e436a07d23b1ba77fd973381d9a83413.jpg">
+                <img src="https://avatars.mds.yandex.net/i?id=fb6c5f04c9d58e24d83580fad91f69fc_l-5318071-images-thumbs&n=13">
+            </div>
+            <div class="text">
+                <p>Только</p>
+                <p><em>горы!</em></p>
+                <p>Только</p>
+                <p><em>вперёд!</em></p>
+            </div>
+        </div>
+    </body>
+</html>
