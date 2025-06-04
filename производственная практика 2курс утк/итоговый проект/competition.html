@@ -1,1 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Конкурсы</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times', serif;
+        }
 
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #8a0303;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #8a0303;
+            color: #121212;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: red;
+        }
+
+        /* Шапка сайта */
+
+        header {
+            background-color: #1e1e1e;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(138, 3, 3, 0.5);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #8a0303;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: #bb86fc;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 25px;
+        }
+
+        /* Основное содержимое */
+
+        .competition-section {
+            padding: 60px 0;
+        }
+
+        .competition-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .competition-title {
+            font-size: 36px;
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+
+        .competition-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(138, 3, 3, 0.3);
+        }
+
+        .competition-content {
+            display: flex;
+            gap: 40px;
+        }
+
+        .competition-main {
+            flex: 2;
+        }
+
+        .competition-description {
+            margin-bottom: 30px;
+            color: #b0b0b0;
+            line-height: 1.8;
+        }
+
+        .competition-sidebar {
+            flex: 1;
+        }
+
+        .competition-info {
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(138, 3, 3, 0.3);
+        }
+
+        .info-title {
+            font-size: 20px;
+            color: #b0b0b0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+        }
+
+        .info-label {
+            color: #b0b0b0;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            color: #b0b0b0;
+            font-weight: bold;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .rating-stars {
+            color: #ffc107;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .rating-value {
+            font-weight: bold;
+        }
+
+        .participants-count {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .participate-button {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 15px;
+        }
+
+        /* Подвал сайта */
+
+        footer {
+                background-color: #121212;
+                padding: 60px 0 30px;
+                color: #b0b0b0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #8a0303;
+        }
+
+        .footer-contact {
+            margin-bottom: 15px;
+        }
+
+        .footer-contact a {
+            color: #b0b0b0;
+            transition: color 0.3s;
+        }
+
+        .footer-contact a:hover {
+            color: #ffffff;
+        }
+
+        .footer-links h3 {
+            color: #8a0303;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #b0b0b0;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #8a0303;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .competition-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 796px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+                display: none;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Стили для печати */
+        @media print {
+            header, footer, .competition-sidebar {
+                display: none;
+            }
+
+            .competition-image {
+                filter: grayscale(100%);
+            }
+
+            .competition-title {
+                color: #000 !important;
+            }
+
+            .competition-description {
+                color: #333 !important;
+            }
+
+            .print-review {
+                display: block !important;
+                margin-top: 30px;
+                padding: 20px;
+                border: 1px solid #ddd;
+                color: #333;
+            }
+        }
+
+        .print-review {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://thumbs.dreamstime.com/b/знак-рок-н-ролл-иллюстрация-цвета-вектора-выгравированная-годом-сбора-100750469.jpg" alt="Логотип 'My metal fest'">
+                    <span class="logo-text">My metal fest</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="registration.html">Регистрация</a></li>
+                        <li><a href="account.html">Личный кабинет</a></li>
+                        <li><a href="schedule.html">Расписание</a></li>
+                        <li><a href="competition.html">Конкурсы</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Основное содержимое -->
+    <section class="competition-section">
+        <div class="container">
+            <div class="competition-header">
+                <h1 class="competition-title">Пивной Король</h1>
+                <img src="https://i.pinimg.com/originals/b5/8e/78/b58e78ec25eab0bf3c1be76d2ebab284.jpg" alt="Пивной Король" class="competition-image">
+            </div>
+            <div class="competition-content">
+                <div class="competition-main">
+                    <h2>Описание конкурса</h2>
+                    <p class="competition-description">
+                        Конкурс "Пивной Король" - это прекрасная возможность для компании друзей посостязаться в распитии главного алкогольного напитка всех фестивалей - Пенного!
+                    </p>
+                    <p class="competition-description">
+                        Главное - хорошо провести время с друзьями, важна не победа, а участие! Для участия необходимо зарегистрироваться на странице конкурса и прийти в назначенный день и время.
+                    </p>
+                    <p class="competition-description">
+                        Конкурс проводится строго среди совершеннолетних людей. Победители будут определяться по следующим критериям: было выпито как можно больше литров пива, человек способен стоять на ногах (шатание допускается) и реагировать (по-возможности адекватно) на внешние раздражители. Победители получат призы от наших партнеров.
+                    </p>
+                </div>
+                <div class="competition-sidebar">
+                    <div class="competition-info">
+                        <h3 class="info-title">Информация о конкурсе</h3>
+                        <div class="info-item">
+                            <div class="info-label">Дата проведения:</div>
+                            <div class="info-value">8 июля 2024 года</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Время:</div>
+                            <div class="info-value">12:00 - 15:00</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Место:</div>
+                            <div class="info-value">WOA</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Возрастные группы:</div>
+                            <div class="info-value">18+</div>
+                        </div>
+                    </div>
+                    <div class="competition-info">
+                        <h3 class="info-title">Участие</h3>
+                        <div class="rating-container">
+                            <span class="rating-stars">★★★★★</span>
+                            <span class="rating-value">5.0/5</span>
+                        </div>
+                        <div class="participants-count">
+                            <span class="info-value">666 человек участвуют</span>
+                        </div>
+                        <a href="account.html" class="btn participate-button">Участвовать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Подвал -->
+    <footer id="footer">
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="https://thumbs.dreamstime.com/b/знак-рок-н-ролл-иллюстрация-цвета-вектора-выгравированная-годом-сбора-100750469.jpg" alt="Логотип 'My metal fest'">
+                    <span class="footer-logo-text">My metal fest</span>
+                </div>
+                <div class="footer-contact">
+                    Телефон: <a href="tel:+74842234567">+7 (4842) 23-45-67</a>
+                </div>
+                <div class="footer-contact">
+                    Email: <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index-light.html">Главная-светлая</a></li>
+                    <li><a href="registration.html">Регистрация</a></li>
+                    <li><a href="competition.html">Конкурс</a></li>
+                    <li><a href="account.html">Личный кабинет</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Дополнительно</h3>
+                <ul>
+                    <li><a href="schedule.html">Расписание</a></li>
+                    <li><a href="404.html">Страница не найдена</a></li>
+                    <li><a href="">Политика конфиденциальности</a></li>
+                    <li><a href="">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 "My metal fest". Все права защищены.</p>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
