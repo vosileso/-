@@ -1,1 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times', serif;
+        }
 
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #8a0303;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Шапка сайта */
+
+        header {
+            background-color: #1e1e1e;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(138, 3, 3, 0.5);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #8a0303;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: #bb86fc;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 25px;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #8a0303;
+            color: #121212;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            margin: 30px 0 0 127px;
+        }
+
+        .home-button:hover {
+            background-color: red;
+        }
+
+        /* Подвал сайта */
+
+        footer {
+                background-color: #121212;
+                padding: 60px 0 30px;
+                color: #b0b0b0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #8a0303;
+        }
+
+        .footer-contact {
+            margin-bottom: 15px;
+        }
+
+        .footer-contact a {
+            color: #b0b0b0;
+            transition: color 0.3s;
+        }
+
+        .footer-contact a:hover {
+            color: #ffffff;
+        }
+
+        .footer-links h3 {
+            color: #8a0303;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #b0b0b0;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #8a0303;
+        }
+
+        /* Адаптивность */
+
+        @media (max-width: 992px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .competition-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 796px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+                display: none;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://thumbs.dreamstime.com/b/знак-рок-н-ролл-иллюстрация-цвета-вектора-выгравированная-годом-сбора-100750469.jpg" alt="Логотип 'My metal fest'">
+                    <span class="logo-text">My metal fest</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="registration.html">Регистрация</a></li>
+                        <li><a href="account.html">Личный кабинет</a></li>
+                        <li><a href="schedule.html">Расписание</a></li>
+                        <li><a href="competition.html">Конкурсы</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Основная часть -->
+    <main>
+        <div style="float: left; margin: 10%; width: 500px; justify-content: space-between; align-items: center;">
+            <div>
+                <h1 style="text-align: center; margin: 30px 0 0 0; font-size: 50px; color: #8a0303;">404</h1>
+                <h2 style="text-align: center; font-size: 20px; color: #8a0303;">Страница не найдена</h2>
+                <p style="font-size: 18px; color: #b0b0b0; margin: 10px 0 0 0;">К сожалению, запрашиваемая вами страница не существует или была перемещена. Возможно, вы ошиблись при вводе адреса или перешли по неработающей ссылке.</p>
+                <a href="index.html" class="home-button">Вернуться на главную</a>
+            </div>
+        </div>
+        <img style="margin:1%;" src="https://resizer.mail.ru/p/82887642-d398-5cbd-85e2-bb770e0e8a18/AQAKR4kCqG-k05p8JLZe0XL9xAtqpex3GDVm3pnLEzKmOP8yl5zd5iQvR5gME_Evm_TcFTAUCvfBa_UDq__UHCUTVnk.webp" width="500">
+    </main>
+    <!-- Подвал -->
+    <footer id="footer">
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="https://thumbs.dreamstime.com/b/знак-рок-н-ролл-иллюстрация-цвета-вектора-выгравированная-годом-сбора-100750469.jpg" alt="Логотип 'My metal fest'">
+                    <span class="footer-logo-text">My metal fest</span>
+                </div>
+                <div class="footer-contact">
+                    Телефон: <a href="tel:+74842234567">+7 (4842) 23-45-67</a>
+                </div>
+                <div class="footer-contact">
+                    Email: <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index-light.html">Главная-светлая</a></li>
+                    <li><a href="registration.html">Регистрация</a></li>
+                    <li><a href="competition.html">Конкурс</a></li>
+                    <li><a href="account.html">Личный кабинет</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Дополнительно</h3>
+                <ul>
+                    <li><a href="schedule.html">Расписание</a></li>
+                    <li><a href="404.html">Страница не найдена</a></li>
+                    <li><a href="">Политика конфиденциальности</a></li>
+                    <li><a href="">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 "My metal fest". Все права защищены.</p>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
